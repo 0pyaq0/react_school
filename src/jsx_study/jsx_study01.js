@@ -27,4 +27,6 @@ const JSXwithExpressions = (
         &nbsp;{double(person.age)}
     </h1>)
 
+
+// render = 가상돔에 적용해서 비교한 후 구성
 ReactDOM.render(JSXwithExpressions, document.getElementById('root'));
