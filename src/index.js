@@ -4,4 +4,6 @@
 // import './component-basic/first-component'
 // import './component-basic/animal-container'
 // import './component-basic/props-basic'
-import './component-basic/component_Q'
+// import './component-basic/component_Q01'
+// import './component-basic/props.children'
+import './component-basic/component_Q02'
