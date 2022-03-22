@@ -1,0 +1,17 @@
+<script>
+    let person = { name: "John", age: 20 }
+    // 객체 복사 진행
+    let copied1 = { ...person }
+    // 먼저 person의 모든 내용을 복사 후, age를 30으로 수정
+    let copied2 = { ...person, age: 30 }
+    // 순서 주의!
+    let copied3 = { age: 30, ...person }
+
+    console.log(copied1) // {name: "John", age: 20}
+    console.log(copied2) // {name: "John", age: 30}
+    console.log(copied3) // {name: "John", age: 20}
+
+    // assign 메소드를 이용해서 객체 복사 가능
+    let copied = Object.assign({}, person)
+
+</script>
