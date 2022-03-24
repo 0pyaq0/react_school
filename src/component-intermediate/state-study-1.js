@@ -16,6 +16,12 @@ const Counter = function(props) {
 
             {/* Q) 감소 버튼 만들어보기 */}
             <button onClick={() => setCount(count - 1)}>감소</button>
+
+            {/* (1) 이전 count 값을 참조하여 값을 수정해야 할 경우 */}
+            <button onClick={() => setCount(count + 1)}>Click me</button>
+            {/* (2) 세터 함수에 이전 값을 참조하여 값을 수정하는 콜백 함수 전달 가능 */}
+            <button onClick={() => setCount(previous => previous + 1)}>Click me</button> 
+            {/* 2번이 더 나음 */}
         </div>
     )
 }

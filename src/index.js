@@ -11,4 +11,5 @@
 // import './component-intermediate/state-study-2'
 // import './component-intermediate/component_Q01'
 // import './component-intermediate/state-study-3'
-import './component-intermediate/state-study-with-inner-object'
+// import './component-intermediate/state-study-with-inner-object'
+import './component-intermediate/counter-demo'
