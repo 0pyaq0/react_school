@@ -1,0 +1,45 @@
+import React, { useState, useEffect } from 'react'
+import ReactDOM from "react-dom"
+
+// useEffect의 두 번째 인자값(의존 배열)을 전달하지 않을 경우 컴포넌트 렌더링이 진행된 이후 매번 콜백 함수가 호출됨
+
+function UseEffectDemo(props) {
+    const [state, setState] = useState("")
+
+    // 의존 배열이 전달되지 않았으므로 매 render 시점 이후 전달할 콜백 함수가 실행됨
+    useEffect(() => {
+        console.log("useEffect")
+    })
+
+    console.log("render")
+    return (
+        <div>
+            <input type="text" value={state}
+                   onChange={(e) => setState(e.target.value)} />
+        </div>
+    )
+}
+
+function Counter() {
+    const [count, setCount] = useState(0)
+
+    // DOM 조작은 side-effect이므로 effect 콜백 함수에서 수행
+    useEffect(() => {
+        // 매 렌더링 이후 제목 내용 바꿔주기
+        document.title = `You clicked ${count} times`
+    })
+
+    return (
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>Click me</button>
+        </div>
+    )
+}
+
+ReactDOM.render((
+    <div>
+        <UseEffectDemo />
+        <Counter />
+    </div>
+), document.getElementById("root"))
