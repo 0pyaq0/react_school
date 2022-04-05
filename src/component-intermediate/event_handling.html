@@ -1,0 +1,11 @@
+<!-- 기존 DOM 요소에 인라인 이벤트를 설정하는 것과 비슷하게 이벤트 핸들러 함수를 연결
+단, 이벤트 이름을 카멜케이스(camelCase)로 입력해야 함 -->
+
+<!-- 기존의 DOM 이벤트 연결 방법 -->
+<button onclick="activateLasers()">Activate Lasers</button>
+
+<!-- onclick이 아니라 onClick으로 입력 (기존 DOM 이벤트와 구분하기 위해서 카멜케이스를 사용함)
+(단, 함수를 호출하는 JS 구문이 아닌, "함수 자체"를 전달해야 함을 유의) -->
+<button onClick={activateLasers}>Activate Lasers</button>
+
+<!-- 필수는 아니지만, 관용적으로 이벤트 핸들러 함수 이름 앞에 handle이라는 접두어를 붙임 -->
