@@ -1,0 +1,12 @@
+<!-- 리액트에서는 이벤트 핸들러 함수에서 false 값을 반환하여 기본 동작(링크 이동, 폼 전송 등)을 방지하도록 할 수 없음
+대신, 이벤트 객체의 preventDefault 메소드를 호출하여 기본 동작을 수행하지 않도록 조정 가능 -->
+
+function ActionLink() {
+    function handleClick(e) {
+        // 이벤트 객체의 preventDefault 메소드 호출하여 기본 동작(링크로 이동)을 막을 수 있음
+        e.preventDefault();
+        console.log('The link was clicked.');
+    }
+
+    return <a href="#" onClick={handleClick}>Click me</a>;
+}
