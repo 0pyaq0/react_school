@@ -13,4 +13,5 @@
 // import './component-intermediate/state-study-3'
 // import './component-intermediate/state-study-with-inner-object'
 // import './component-intermediate/counter-demo'
-import './component-intermediate/todo-app-demo'
+// import './component-intermediate/todo-app-demo'
+import './use-effect-demo/use-effect-fetch-api'
