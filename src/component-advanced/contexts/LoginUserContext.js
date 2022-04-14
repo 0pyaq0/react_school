@@ -22,12 +22,13 @@ function LoginButton(props) {
                     cell: data.results[0].cell, // 전화번호
                 });
                 // setFetching(false) fetching이 끝났으므로 false로 바꿔주는 게 맞지만 밑에서 amount되니까 의미 X
+                // 이미 amount되어있는 컴포넌트 상태를 왜 바꾸려해?
             })
     }
 
     return (
         fetching ?
-            <button disabled>...</button> :
+            <button disabled>...</button> : //누를 수 없는 상태
             <button onClick={handleLogin}>Login</button>
     )
 }
