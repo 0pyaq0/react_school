@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import buttonStyle from './MyButton.module.css'
+import cn from 'classnames'
 
 const MyButton = function(props) {
     // 고유한 클래스 이름이 부여된 것을 확인 가능
@@ -8,7 +9,7 @@ const MyButton = function(props) {
     console.log(buttonStyle)
 
     // 객체의 font, color, size, border 속성에 클래스 이름이 저장됨
-    return <button className={`${buttonStyle.font} ${buttonStyle.color} ${buttonStyle.size} ${buttonStyle.border}`}>{props.label}</button>
+    return <button className={cn(font, color, size, border)}>{props.label}</button>
 }
 
 ReactDOM.render(<MyButton label="Click Me" />, document.getElementById("root"))
